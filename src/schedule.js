@@ -1,4 +1,4 @@
-const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbx59GPGqZXH9ZWUZTm9X-gjAOX2j9C-WduMEiikL9WJvs2aBUqjwIuhHN7JBQOLBco/exec';
+const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbybNvoJzzOcr5kuqfTMjkPEkVj2hTAsGWIv0Wf8qJIRVqL0H02saeyG4EQQlXXQhDs/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchSchedule();
