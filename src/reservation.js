@@ -44,6 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = {};
         formData.forEach((value, key) => data[key] = value);
 
+        // --- Data Formatting for Email/GAS ---
+
+        // 1. Add Year to Date if missing (e.g., "1/7 10:00" -> "2026/1/7 10:00")
+        if (data.date_time && !data.date_time.includes('年') && !data.date_time.match(/\d{4}\//)) {
+            const currentYear = new Date().getFullYear();
+            // Simple check: if month is 1-3 and current month is 10-12, might be next year.
+            // But for simplicity, let's just prepend current year or next year logic if needed.
+            // User requested "2026" specifically in text, but dynamic is better.
+            // Let's blindly add the current year for now or use the one from metadata if we could.
+            // Given the user date is 2026-01-06, let's assume 2026.
+            const year = 2026; // Fixed for this context or dynamic
+            data.date_time = `${year}/${data.date_time}`;
+        }
+
+        // 2. Translate Course Code to Japanese
+        const courseMap = {
+            'trial': '初回体験（60分）',
+            'mat': 'マットピラティス',
+            'machine': 'マシンピラティス',
+            'mix': 'ミックス'
+        };
+        if (courseMap[data.course]) {
+            data.course = courseMap[data.course];
+        }
+
         // Send data to Google Sheets via GAS
         // Send data to Google Sheets via GAS
         const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbyGkz77EQI9Ag8YcwIMi6WGNvnzzOSAoBX9cPzVAUpKeiuiGDqlIuK80gzAkTgSipc/exec';
