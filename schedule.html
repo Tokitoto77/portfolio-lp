@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>空き状況 | Tirapisu Pilates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">Tirapisu<span class="logo-sub">Pilates</span></a>
+            <div class="header__actions">
+                <a href="index.html" class="btn btn--sub">トップに戻る</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding" style="margin-top: 40px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h1 class="section-title">レッスンスケジュール</h1>
+                    <p>リアルタイムの空き状況をご確認いただけます。<br>体験レッスンをご希望の方は「体験」枠または対象クラスをご選択ください。</p>
+                </div>
+
+                <div class="schedule-wrapper glass" style="padding: 0;">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>日付</th>
+                                <th>時間</th>
+                                <th>クラス</th>
+                                <th>状況</th>
+                                <th>予約</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                            <!-- Data will be loaded via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="legend text-center mt-4">
+                    <span>◎：余裕あり</span>
+                    <span style="margin: 0 1rem;">△：残りわずか</span>
+                    <span>×：満席</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="index.html" class="footer__logo">Tirapisu</a>
+                <address>
+                    東京都渋谷区〇〇 1-2-3<br>
+                    10:00 - 21:00（不定休）
+                </address>
+            </div>
+            <div class="footer__copy">
+                &copy; 2024 Tirapisu Pilates.
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./src/schedule.js"></script>
+</body>
+
+</html>
