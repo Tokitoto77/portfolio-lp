@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Send data to Google Sheets via GAS
         // Send data to Google Sheets via GAS
-        const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbyGkz77EQI9Ag8YcwIMi6WGNvnzzOSAoBX9cPzVAUpKeiuiGDqlIuK80gzAkTgSipc/exec';
+        const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbx59GPGqZXH9ZWUZTm9X-gjAOX2j9C-WduMEiikL9WJvs2aBUqjwIuhHN7JBQOLBco/exec';
 
         try {
             // Google Apps Script requires Content-Type: text/plain to avoid CORS preflight issues
