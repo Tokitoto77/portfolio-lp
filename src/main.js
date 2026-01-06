@@ -1,17 +1,17 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Tirapisu LP Loaded");
+  console.log("CORE SHAPE PILATES LP Loaded");
 
   // Mobile Menu Toggle
   const menuBtn = document.querySelector('.mobile-menu-btn');
   const nav = document.querySelector('.header__nav');
-  
+
   if (menuBtn && nav) {
     menuBtn.addEventListener('click', () => {
       nav.classList.toggle('open');
       const spans = menuBtn.querySelectorAll('span');
-      
+
       // Simple hamburger to X animation logic (optional, css can handle if class added)
       if (nav.classList.contains('open')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
