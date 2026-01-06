@@ -82,7 +82,7 @@
             margin-bottom: 20px;
         }
     </style>
-  <script type="module" crossorigin src="/portfolio-lp/assets/reservation-BvTXVIlL.js"></script>
+  <script type="module" crossorigin src="/portfolio-lp/assets/reservation-BjrU6Hnv.js"></script>
   <link rel="modulepreload" crossorigin href="/portfolio-lp/assets/style-BchAeMK8.js">
   <link rel="stylesheet" crossorigin href="/portfolio-lp/assets/style-zr_DoFhs.css">
 </head>
@@ -130,7 +130,12 @@
                         <!-- Name -->
                         <div class="form-group">
                             <label class="form-label">お名前<span>必須</span></label>
-                            <input type="text" name="name" class="form-input" placeholder="山田 花子" required>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="text" name="last_name" class="form-input" placeholder="姓（山田）" required
+                                    style="flex: 1;">
+                                <input type="text" name="first_name" class="form-input" placeholder="名（花子）" required
+                                    style="flex: 1;">
+                            </div>
                         </div>
 
                         <!-- Email -->
